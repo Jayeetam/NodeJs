@@ -12,7 +12,7 @@ const requestHandler = (req, res) => {
     res.write('</html>');
     return res.end();
   }
-  
+
   if (url === '/message' && method === 'POST') {
     const body = [];
     req.on('data', chunk => {
@@ -36,8 +36,6 @@ const requestHandler = (req, res) => {
   res.write('</html>');
   res.end();
 };
-
-
 
 exports.handler = requestHandler;
 exports.someText = 'Some hard coded text';
